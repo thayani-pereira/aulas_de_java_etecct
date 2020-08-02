@@ -1,0 +1,17 @@
+
+import javax.swing.*;
+class SimpleFrame
+{
+public static void main(String args[ ])
+{
+JFrame frame = new JFrame(“Swing Application”);
+JButton but = new JButton(“I am a Swing button”);
+JLabel texto = new JLabel(“Number of button clicks: 0”);
+JPanel painel = new JPanel( );
+painel.add(but);
+painel.add(texto);
+frame.getContentPane( ).add(painel);
+frame.pack( );
+frame.show( );
+}
+}

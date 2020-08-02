@@ -1,0 +1,13 @@
+import java.awt.*;
+import javax.swing.*;
+public class Swinggy extends JFrame
+{
+public Swinggy(String nome) {
+super(nome);
+this.setSize(400,350);
+this.setVisible(true);
+}
+public static void main(String[] args) {
+new Swinggy("Swinggy 1.0");
+}
+}

@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+public class salario_funcionario {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+        Scanner in = new Scanner(System.in);
+		
+		int mes = 1; // Janeiro
+		int mesMenor = 0, mesMaior = 0;
+		double salario = 0, salarioMenor = 0, salarioMaior = 0, salarioTotal = 0
+		
+		while (mes <= 12) {
+			
+			System.out.println("Informe o salario do mes " + mes);
+			salario = in.nextDouble();
+			
+			if (mes == 1) {
+				salarioMenor = salario;
+				mesMenor = mes;
+				salarioMaior = salario;
+				mesMaior = mes;
+			} else {
+				
+				if (salarioMenor > salario) {
+					salarioMenor = salario;
+					mesMenor = mes;
+				}
+				
+				if (salario > salarioMaior) {
+					salarioMaior = salario;
+					mesMaior = mes;
+				}
+			}
+			
+			salarioTotal = salarioTotal + salario;
+			
+			mes = mes + 1;
+		}
+		
+		System.out.println("Mês e o valor do maior salário");
+		System.out.println("R: Mês " + mesMaior + ", Salário R$" + salarioMaior);
+
+		System.out.println("Mês e o valor do menor salário");
+		System.out.println("R: Mês " + mesMenor + ", Salário R$" + salarioMenor);
+		
+		System.out.println("O salário médio");
+		System.out.println("R: Salário Médio R$" + salarioTotal / 12);
+		
+		System.out.println("A somatória do rendimento");
+		System.out.println("R: Rendimentos R$" + salarioTotal);
+
+
+	}
+
+}

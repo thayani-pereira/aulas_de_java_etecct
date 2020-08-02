@@ -1,0 +1,7 @@
+
+public interface Pessoa {
+	
+	int teste = 0;
+	
+	void apresentar();
+}

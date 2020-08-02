@@ -1,0 +1,24 @@
+import java.awt.Container;
+import java.awt.FlowLayout;
+
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Swinggy2 extends JFrame {
+public Swinggy2(String nome) {
+super(nome);
+Container ct = this.getContentPane();
+ct.setLayout(new FlowLayout());
+Icon icone = new ImageIcon("jet.gif");
+JButton b1 = new JButton("Sair");
+JButton b2 = new JButton("Viajar", icone);
+ct.add(b1);
+ct.add(b2);
+this.setSize(400,350);
+this.setVisible(true);
+}
+
+
+}

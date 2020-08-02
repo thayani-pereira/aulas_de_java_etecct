@@ -1,0 +1,10 @@
+
+public class Professor implements Pessoa {
+
+	@Override
+	public void apresentar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

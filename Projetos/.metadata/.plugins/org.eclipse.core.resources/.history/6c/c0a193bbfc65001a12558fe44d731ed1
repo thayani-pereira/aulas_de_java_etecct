@@ -1,0 +1,9 @@
+
+public class Aluno implements Pessoa {
+	
+	@Override
+	public void apresentar() {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,25 @@
+import java.awt.Button;
+
+public class AplicacaoGrafica extends Frame{
+ private Button butOK;
+ private TextField campo1,campo2,resp;
+ private Label texto1,texto2;
+
+ public AplicacaoGrafica( ){
+ super("Aplicacao grafica simples");
+ addWindowListener(new AppListener( ));
+ texto1 = new Label("Nome:"); campo1 = new TextField(15);
+ texto2 = new Label("Fone:"); campo2 = new TextField(15);
+ butOK = new Button("OK"); resp = new TextField(15);
+ setLayout(new GridLayout(3,2));
+ add(texto1); add(campo1);
+ add(texto2); add(campo2);
+ add(butOK); add(resp);
+ butOK.addActionListener(new ActionListener(){
+ public void actionPerformed(ActionEvent e){
+ resp.setText(campo1.getText()+" "+campo2.getText());
+ }
+ });
+ pack( );
+ }
+}
